@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap");
+@font-face {
+  font-family: clock;
+  src: url(/assets/font/digital-7.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background: white;
+  color: white;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.adr {
+  background: #202020;
+}
+
+.layout {
+  width: 100%;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.clock-div {
+  width: 300px;
+  height: 100px;
+  background: #151515;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.arr {
+  background: #e23556;
+}
+
+.clock-div::after {
+  content: '';
+  width: 100%;
+  height: 10px;
+  background: #e23556;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px 6px 0 0;
+}
+
+#clock {
+  font-family: clock;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  text-align: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 60px;
+  margin: 0 10px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+  border-radius: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  height: 50px;
+  width: 50px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: white;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+  border-radius: 50px;
+}
+
+.switch input:checked + .slider::before {
+  -webkit-transform: translate(50px);
+          transform: translate(50px);
+  background: #e23556;
+}
+/*# sourceMappingURL=App.css.map */
